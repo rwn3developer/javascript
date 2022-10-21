@@ -1,0 +1,89 @@
+name :- <input type="text" id="name" /> <br>
+email :- <input type="text" id="email" /> <br>
+gender :- <input type="checkbox" name="gender" value="male"> Male <br>
+        <input type="checkbox" name="gender" value="female"> Female <br>
+        <input type="checkbox" name="gender" value="other"> other <br>
+
+
+<input type="button" value="submit" onclick="save()">
+
+<table border="1" id="data">
+    
+</table>
+
+<script type="text/javascript">
+
+    let data = [];
+
+    viewData();
+    function save()
+    {
+        let name  = document.getElementById('name').value;
+        let email  = document.getElementById('email').value;
+        let gender = document.getElementsByName('gender');
+        let r = [];
+        
+        for(let i in gender)
+        {
+            if(gender[i].checked)
+            {
+                
+                    r[i] = gender[i].value;
+                    if(r[i] != null)
+                    {
+                        r[i] = gender[i].value;
+                    }
+            }
+        }
+        let obj = {
+            name : name,
+            email : email,
+            gender : r
+        }
+
+            if(localStorage.getItem('admin')=== null)
+            {
+                data.push(obj);
+                let st = JSON.stringify(data);
+                localStorage.setItem('admin',st);
+                viewData();
+                alert("not page refresh");
+            }
+            else{
+                let value = localStorage.getItem('admin');
+                let val  = JSON.parse(value);
+                data = val;
+                data.push(obj);
+                let st = JSON.stringify(data);
+                localStorage.setItem('admin',st);
+                viewData();
+                alert("page refresh");
+            }
+
+               
+    }
+
+    function viewData()
+    {
+        var value = localStorage.getItem('admin');
+        var val = JSON.parse(value)
+        let table = "";
+        table += `<tr>
+                        <td>name</td>
+                        <td>email</td>
+                    </tr>`;
+            
+        for(let i in val)
+        {
+            table += `<tr>
+                        <td>${val[i].name}</td>
+                        <td>${val[i].email}</td>
+                     </tr>`;
+        }
+
+        document.getElementById('data').innerHTML = table;
+    }
+
+   
+
+</script>

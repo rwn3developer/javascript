@@ -1,0 +1,26 @@
+<script type="text/javascript">
+
+var a = [10,25,10,5,25,10,5,4,25,5,8,10];
+            // 0  0  0 0  0    0 0    0
+    
+    var dup = [];
+    for(let i=0;i<a.length;i++)
+    {
+        var cnt=1;
+        for(let j=i+1;j<a.length;j++)
+        {
+            if(a[i]==a[j])
+            {
+                cnt++;
+                dup[j] = 0;
+            }
+        }
+
+        if(dup[i]!=0)
+        {
+            dup[i] = cnt;
+            console.log(a[i]+"="+dup[i]);
+        }
+    }
+
+</script>

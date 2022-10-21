@@ -1,0 +1,74 @@
+<script type="text/javascript">
+
+
+    function name()
+    {
+        return new Promise((resolve,reject)=>{
+            setTimeout(()=>{
+                console.log("Name");
+                resolve();
+            },1000);
+        })
+           
+            
+    }
+   function email()
+   {
+    return new Promise((resolve,reject)=>{
+        setTimeout(()=>{
+            console.log("Email");
+            resolve();
+        },3000);
+    })
+       
+        
+   }
+   function password()
+   {
+        
+        return new Promise((resolve,reject)=>{
+
+                let obj = {
+                name : "milan",
+                email : "milan@gmail.com",
+                password : "1234"
+            }
+
+                setTimeout(()=>{
+                    console.log("password");
+                resolve(obj);
+            },1000);
+        })
+       
+
+   }
+   function login()
+   {    
+        return new Promise((resolve,reject)=>{
+            setTimeout(()=>{
+                console.log("Login"); 
+                resolve(); 
+            },1000);
+        })     
+   }
+
+//    name(()=>{
+//         email(()=>{
+//             password(()=>{
+//                 login();
+//             });
+           
+//         });
+        
+//    });
+
+
+    name()
+    .then(email)
+    .then(password).then((data)=>{console.log(data);})
+    .then(login);
+  
+   console.log("Last line print");
+
+
+</script>

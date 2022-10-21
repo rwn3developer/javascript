@@ -1,0 +1,51 @@
+<script type="text/javascript">
+
+
+    function name(callback)
+    {
+        setTimeout(()=>{
+            console.log("Name");
+            callback();
+        },1000);
+            
+    }
+   function email(callback)
+   {
+        setTimeout(()=>{
+            console.log("Email");
+            callback();
+        },5000);
+        
+   }
+   function password(callback)
+   {
+        setTimeout(()=>{
+            console.log("Password");
+            callback();
+        },1000);
+
+   }
+   function login(callback)
+   {
+        setTimeout(()=>{
+            console.log("Login");  
+        },1000);
+           
+   }
+
+   name(()=>{
+        email(()=>{
+            password(()=>{
+                login();
+            });
+           
+        });
+        
+   });
+  
+   console.log("Last line print");
+
+
+</script>
+
+

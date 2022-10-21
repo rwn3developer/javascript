@@ -1,0 +1,19 @@
+<form name="form" method="post">
+    Name : <input type="text" name="name">
+    hobby : <input  type="checkbox" name="hobby" value="Cricket" id="hobby"/>Cricket
+    <input  type="checkbox" value="Music" name="hobby"/>Music
+    <input  type="checkbox" value="Football" name="hobby"/>Football
+    <input type="button" name="Button" onclick="data()"/>
+</form>
+
+<script type="text/javascript">
+    let data = () =>{
+        let name = document.forms['form']['name'].value;
+        let hobby = document.getElementsByName('hobby[]');
+        
+        for(let i in hobby)
+        {
+            console.log(hobby);
+        }
+    }
+</script>

@@ -1,0 +1,76 @@
+<style>
+    
+</style>
+
+
+<body>
+
+    <table border="1">
+        <tr>
+            <td>Row :- </td>
+            <td><input type="text" id="row"></td>
+        </tr>
+        <tr>
+            <td>Col :- </td>
+            <td><input type="text" id="col"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><input type="button" value="submit" onclick="save()"></td>
+        </tr>
+    </table><br>
+
+    <table id="chess">
+
+    </table>
+</body>
+
+
+<script type="text/javascript">
+
+    function save()
+    {
+        let row = document.getElementById('row').value;
+        let col = document.getElementById('col').value;
+
+        for(let i=1;i<=row;i++)
+        {
+            let tr = document.createElement('tr');
+
+            for(let j=1;j<=col;j++)
+            {
+                let td = document.createElement('td');
+                let input = "<input type='button'/>";
+                td.innerHTML = "<input type='text'>";
+                
+                
+                td.appendChild(input);
+                tr.appendChild(td);
+            }
+            
+
+             document.getElementById('chess').appendChild(tr);
+        }
+        
+    }
+    
+    // for(let i=1;i<=8;i++)
+    // {
+    //     let tr = document.createElement('tr');
+
+    //     for(j=1;j<=8;j++)
+    //     {
+    //         let td = document.createElement('td');
+    //         td.innerHTML = "<input  type='text'/>";
+    //         tr.appendChild(td);
+    //     }
+        
+    //     document.getElementById('chess').appendChild(tr);
+    // }
+    
+
+
+</script>
+
+
+

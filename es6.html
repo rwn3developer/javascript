@@ -1,0 +1,37 @@
+<script type="text/javascript">
+
+   let data = [
+        {
+            name : "jay",
+            email : "jay@gmail.com",
+            phone : 1234,
+            hobby : [
+                "cricket",
+                "music",
+            ]
+        }
+   ];
+
+   let row = "";
+    row+= `<table border="1">`;
+        row += `<tr>
+                    <td>Name</td>
+                    <td>Email</td>
+                    <td>Phone</td>
+                    <td>Hobby</td>
+                </tr>`
+       
+    for(let i in data)
+    {
+            row += `<tr>
+                        <td>${data[i].name}</td>
+                        <td>${data[i].email}</td>
+                        <td>${data[i].phone}</td>
+                        <td>${data[i].hobby}</td>
+                    </tr>`
+    }
+
+    row += '</table>'; 
+   document.write(row);
+   
+</script>

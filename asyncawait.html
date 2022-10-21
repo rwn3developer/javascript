@@ -1,0 +1,78 @@
+<script type="text/javascript">
+
+
+    function name()
+    {
+        return new Promise((resolve,reject)=>{
+            setTimeout(()=>{
+                console.log("Name");
+                resolve();
+            },1000);
+        })      
+    }
+   function email()
+   {
+    return new Promise((resolve,reject)=>{
+        setTimeout(()=>{
+            console.log("Email");
+            reject("Email not valid");
+        },3000);
+    })
+       
+        
+   }
+   function password()
+   {
+        
+        return new Promise((resolve,reject)=>{
+
+                let obj = {
+                name : "milan",
+                email : "milan@gmail.com",
+                password : "1234"
+            }
+
+                setTimeout(()=>{
+                    console.log("password");
+                resolve(obj);
+            },1000);
+        })
+       
+
+   }
+   function login()
+   {    
+        return new Promise((resolve,reject)=>{
+            setTimeout(()=>{
+                console.log("Login"); 
+                resolve(); 
+            },1000);
+        })     
+   }
+
+
+   async function all()
+   {
+        try{
+            await name();
+            await email();
+            await password();
+            await login();
+        }
+        catch(err)
+        {
+            console.log(err);
+            throw new Error;
+        }
+        
+   }
+
+   all().then(()=>{
+        console.log("All method are running");
+   }).catch((err)=>{
+        console.log(err);
+   });
+  
+   console.log("Last line print");
+
+</script>

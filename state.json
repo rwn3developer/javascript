@@ -1,0 +1,42 @@
+[
+    {
+        "state" : "gujarat",
+        "country_id" : "634795643585a8b72b79072f"
+    },
+    {
+        "state" : "america-a-state",
+        "country_id" : "63463a08c844054ff8c13cdd"
+    },
+    {
+        "state" : "africa-a-state",
+        "country_id" : "634795643585a8b72b790731"
+    },
+    {
+        "state" : "punjab",
+        "country_id" : "634795643585a8b72b79072f"
+    },
+    {
+        "state" : "america-d-state",
+        "country_id" : "634795643585a8b72b790730"
+    },
+    {
+        "country_id" : "634795643585a8b72b790730",
+        "state" : "america-b-state"
+    },
+    {
+        "state" : "africa-b-state",
+        "country_id" : "634795643585a8b72b790731"
+    },
+    { 
+        "state" : "maharashtra",
+        "country_id" : "634795643585a8b72b79072f"
+    },
+    {
+        "state" : "america-c-state",
+        "country_id" : "634795643585a8b72b790730"
+    },
+    {
+        "state" : "africa-c-state",
+        "country_id" : "634795643585a8b72b790731"
+    }
+]

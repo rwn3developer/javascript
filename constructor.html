@@ -1,0 +1,143 @@
+<form method="post">
+    <table border="1">
+        <tr>
+            <td>Email : </td>
+            <td><input type="text" id="email"></td>
+        </tr>
+        <tr>
+            <td>Password : </td>
+            <td><input type="text" id="password"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><input type="button" onclick="login()" value="Login"></td>
+        </tr>
+    </table>
+</form>
+
+<script type="text/javascript">
+
+    let data = [
+                {
+                    name : "milan",
+                    email : "milan@gmail.com",
+                    password : 1234
+                },
+                {
+                    name : "ajay",
+                    email : "ajay@gmail.com",
+                    password : 123456
+                }
+            ];
+
+
+            function login()
+            {
+                let msg = "";
+                let email = document.getElementById('email').value;
+                let password = document.getElementById('password').value;
+                for(let i in data)
+                {
+                        if(data[i].email == email || data[i].password == password)
+                        {
+                            if(data[i].email == email)
+                            {
+                                if(data[i].password == password)
+                                {
+                                       msg = 1;
+                                }else{
+                                    msg = 2;
+                                }
+                                break;
+                            }
+                            else{
+                                if(data[i].password == password)
+                                {
+                                    msg = 3;
+                                    break;
+                                }
+                                
+                            }
+                        }
+                        else{
+                            msg = 4;
+                        }
+                }
+
+
+                if(msg == 1){
+                   
+                    alert("Login successfully");
+                    return false;
+                    
+                }
+                else if(msg == 2){
+                    alert("password not match");
+                    return false;
+                }
+                if(msg == 3){
+                    alert("Email not found");
+                    return false;
+                }
+                else if(msg==4){
+                    alert("Email and Password not found");
+                    return false;
+                } 
+            }
+
+
+
+
+    // function login()
+    // {
+       
+
+    //         class Login{
+
+    //                 constructor(email,password)
+    //                 {   
+
+    //                     alert(email);
+    //                     alert(password);
+
+    //                     let check = 0;
+    //                     for(let i=0;i<data.length;i++)
+    //                     {
+                            
+    //                             if(data[i].email == email)
+    //                             {
+
+    //                                 alert(data[i].email);
+    //                                 // if(data[i].password == password)
+    //                                 // {
+    //                                 //     alert("Login successfully");
+    //                                 //     return false;
+
+    //                                 // }
+    //                                 // else{
+    //                                 //     alert("Password is not match");
+    //                                 //     return false;
+    //                                 // }   
+    //                             }
+    //                             // else{
+    //                             //     alert("Email is not found");
+    //                             //     return false;
+    //                             // }    
+    //                     }  
+    //                 }
+
+    //                 // ans = () => {
+    //                 //     console.log("vv");
+    //                 // }
+
+    //             }
+
+    //            
+    //             let obj = new Login(email,password);
+    //             // obj.ans();
+    // }
+
+           
+
+</script>
+

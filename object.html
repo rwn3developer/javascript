@@ -1,0 +1,155 @@
+<form method="post">
+    <table border="1">
+        <tr>
+            <td>Name : </td>
+            <td><input type="text" id="name"/></td>
+        </tr>
+        <tr>
+            <td>Age : </td>
+            <td><input type="text" id="age"/></td>
+        </tr>
+        <tr>
+            <td>Course : </td>
+            <td><input type="text" id="course"/></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><input type="button" onclick="save()" value="submit"/></td>
+        </tr>
+    </table>
+</form>
+
+<table border="1" id="tbldata">
+    
+</table>
+
+<!-- <script type="text/javascript">
+
+const person = [
+            {
+                name: "Amit",
+                age: 25,
+                course: [
+                    "java",
+                    "php"
+                ]
+            },
+            {
+                name: "Ajay",
+                age: 25,
+                course: [
+                    "C",
+                    "HTML"
+                ]
+            },
+            {
+                name: "Ashish",
+                age: 25,
+                course: [
+                    "C++",
+                    "paython"
+                ]
+            }
+    ]
+
+    display();
+    function save()
+    {
+       var name = document.getElementById('name').value;
+       var age = document.getElementById('age').value;
+       var course = document.getElementById('course').value;
+        var c = course.split(",");
+        var carr = [];
+
+        for(let i in c){
+            carr.push(c[i]);
+        }
+
+        let obj = {
+            name : name,
+            age : age,
+            course : carr
+        }
+
+        person.push(obj); 
+        display();
+    }
+
+    function display()
+    {
+        var row = "";
+        row +=`<tr>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Course</th>
+        </tr>`;
+        
+    
+        for(var i in person)
+        {    
+                    row += `<tr>
+                                <td>${ person[i].name }</td>
+                                <td>${ person[i].age }</td>
+                                <td>${ person[i].course }</td>
+                            </tr>`;
+        }
+    
+    
+        document.getElementById("tbldata").innerHTML = row;
+    }
+       
+
+</script> -->
+
+
+<script type="text/javascript">
+    
+
+    let studentdata = [
+	{
+		name : "abc",
+		email : "abc@gmail.com",
+		phone : 9876734,
+		course : "php",
+		fees : 20000,
+		status : 'active'
+	},
+    {
+		name : "def",
+		email : "abc@gmail.com",
+		phone : 9873412,
+		course : "react js",
+		fees : 40000,
+		status : 'active'
+	},
+    {
+		name : "pqr",
+		email : "pqr@gmail.com",
+		phone : 987451,
+		course : "node js",
+		fees : 40000,
+		status : 'dective'
+	},
+    {
+		name : "xyz",
+		email : "abc@gmail.com",
+		phone : 763512,
+		course : "javascript",
+		fees : 15000,
+		status : 'active'
+	},
+    {
+		name : "ghi",
+		email : "abc@gmail.com",
+		phone : 763412,
+		course : "photoshp",
+		fees : 10000,
+		status : 'deactive'
+	},
+    
+	
+];
+
+
+
+</script>

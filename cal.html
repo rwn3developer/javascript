@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <form name="cal">
+        <table border="1">
+            <tr>
+                <td><input type="text" name="ans"/></td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="button" value="1" onclick="cal.ans.value += '1'"/>
+                    <input type="button" value="2" onclick="cal.ans.value += '2'"/>
+                    <input type="button" value="3" onclick="cal.ans.value += '3'"/>
+                    <input type="button" value="+" onclick="cal.ans.value += '+'"/>
+                    <input type="button" value="=" onclick="cal.ans.value = eval(cal.ans.value)">
+                </td>
+            </tr>
+        </table>
+    </form>
+    
+</body>
+</html>
